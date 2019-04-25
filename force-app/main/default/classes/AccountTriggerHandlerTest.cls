@@ -93,4 +93,53 @@ private with sharing class AccountTriggerHandlerTest {
 
     }
 
+    /**
+     * Example of a process builder test.
+     * When DML occurs, the process executes.
+     * Like testing Apex code, we need to assert our declarative side effects too.
+     */
+    @IsTest
+    static void whenRatingChangesThenPostToChatter() {
+
+        List<FeedItem> posts;
+
+        Account acct = new Account(
+            Name = 'Test Account'
+        );
+
+        insert acct;
+
+        System.assertEquals( 0, [ SELECT COUNT() FROM FeedItem WHERE ParentId = :acct.Id ] );
+
+        Test.startTest();
+
+        // assert 'Hot' => chatter post about hot
+        acct.Rating = 'Hot';
+        update acct;
+
+        posts = [ SELECT Id, ParentId, Body FROM FeedItem WHERE ParentId = :acct.Id ];
+        System.assertEquals( 1, posts.size() );
+        System.assert( posts[0].Body.containsIgnoreCase( 'so hot' ) );
+        delete posts;
+
+        // assert 'Cold' => chatter post about cold
+        acct.Rating = 'Cold';
+        update acct;
+
+        posts = [ SELECT Id, ParentId, Body FROM FeedItem WHERE ParentId = :acct.Id ];
+        System.assertEquals( 1, posts.size() );
+        System.assert( posts[0].Body.containsIgnoreCase( 'so cold' ) );
+        delete posts;
+
+        // assert 'Warm' => no chatter post
+        acct.Rating = 'Warm';
+        update acct;
+
+        posts = [ SELECT Id, ParentId, Body FROM FeedItem WHERE ParentId = :acct.Id ];
+        System.assertEquals( 0, posts.size() );
+
+        Test.stopTest();
+
+    }
+
 }
