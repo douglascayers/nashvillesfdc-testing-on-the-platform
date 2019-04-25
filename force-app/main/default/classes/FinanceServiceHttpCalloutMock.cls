@@ -7,6 +7,9 @@ public inherited sharing class FinanceServiceHttpCalloutMock implements System.H
 
         HttpResponse res = new HttpResponse();
 
+        // A way for tests to ask for different responses is for the mock class
+        // to either provide class properties the test sets ahead of time, or,
+        // as is done here, to look for specific URL values in the request endpoint.
         if ( endpointUrl.getQuery().containsIgnoreCase( 'symbol=CRM' ) ) {
 
             res.setStatus( 'OK' );
@@ -27,7 +30,9 @@ public inherited sharing class FinanceServiceHttpCalloutMock implements System.H
                 }
             }));
 
-        } else if ( endpointUrl.getQuery().containsIgnoreCase( 'symbol=ERROR' ) ) {
+        }
+        // For a test to ask for an error response, they use the ERROR ticker symbol.
+        else if ( endpointUrl.getQuery().containsIgnoreCase( 'symbol=ERROR' ) ) {
 
             res.setStatus( 'Error' );
             res.setStatusCode( 500 );

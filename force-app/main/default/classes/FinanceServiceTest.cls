@@ -4,6 +4,9 @@ private class FinanceServiceTest {
     @IsTest
     static void testGetStockInfo_success() {
 
+        // Tests cannot make actual callouts, so we must mock them.
+        // As a unit test, we are asserting our code's behavior to
+        // specific kinds of responses that our mock class provides.
         Test.setMock( HttpCalloutMock.class, new FinanceServiceHttpCalloutMock() );
 
         Test.startTest();
@@ -25,6 +28,9 @@ private class FinanceServiceTest {
     @IsTest
     static void testGetStockInfo_failure() {
 
+        // Tests cannot make actual callouts, so we must mock them.
+        // As a unit test, we are asserting our code's behavior to
+        // specific kinds of responses that our mock class provides.
         Test.setMock( HttpCalloutMock.class, new FinanceServiceHttpCalloutMock() );
 
         Test.startTest();

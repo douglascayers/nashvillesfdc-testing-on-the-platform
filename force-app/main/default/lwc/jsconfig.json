@@ -2,7 +2,14 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/FinanceStockInfo": [
+                "FinanceStockInfo/FinanceStockInfo.js"
+            ],
+            "c/financeStockInfo": [
+                "financeStockInfo/financeStockInfo.js"
+            ]
+        }
     },
     "include": [
         "**/*",

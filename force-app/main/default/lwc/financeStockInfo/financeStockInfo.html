@@ -1,0 +1,60 @@
+<template>
+
+    <template if:true={stockInfo}>
+
+        <lightning-card title="Today's Stock Info">
+
+            <div class="slds-form slds-p-around_small">
+
+                <div class="slds-form-element slds-form-element_readonly">
+                    <span class="slds-form-element__label">Symbol</span>
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">
+                            {stockInfo.symbol}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-form-element slds-form-element_readonly">
+                    <span class="slds-form-element__label">Open Price</span>
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">
+                            <lightning-formatted-number value={stockInfo.openPrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-form-element slds-form-element_readonly">
+                    <span class="slds-form-element__label">High Price</span>
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">
+                            <lightning-formatted-number value={stockInfo.highPrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-form-element slds-form-element_readonly">
+                    <span class="slds-form-element__label">Low Price</span>
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">
+                            <lightning-formatted-number value={stockInfo.lowPrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-form-element slds-form-element_readonly">
+                    <span class="slds-form-element__label">Close Price</span>
+                    <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">
+                            <lightning-formatted-number value={stockInfo.closePrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </lightning-card>
+
+    </template>
+
+</template>
