@@ -1,5 +1,5 @@
 @IsTest
-private with sharing class FinanceControllerTest {
+private class FinanceControllerTest {
 
     // TODO
 

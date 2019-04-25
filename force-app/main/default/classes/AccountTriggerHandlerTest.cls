@@ -1,5 +1,5 @@
 @IsTest
-private with sharing class AccountTriggerHandlerTest {
+private class AccountTriggerHandlerTest {
 
     /**
      * Example of a unit test.
