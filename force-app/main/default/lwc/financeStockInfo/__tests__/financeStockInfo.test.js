@@ -80,7 +80,7 @@ describe( 'c-finance-stock-info', () => {
         document.body.appendChild( element );
 
         // Emit data from @wire
-        getRecordAdapter.emit( mockAccountWithTickerSymbol );
+        getRecordAdapter.emit( mockAccountWithoutTickerSymbol );
 
         getStockInfoAdapter.emit( null );
 
