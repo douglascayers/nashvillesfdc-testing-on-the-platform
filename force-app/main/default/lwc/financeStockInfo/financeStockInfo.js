@@ -9,6 +9,8 @@ export default class FinanceStockInfo extends LightningElement {
 
     @api recordId;
 
+    @track symbol;
+
     @track stockInfo;
 
     @wire( getRecord, { recordId: '$recordId', fields: ACCOUNT_FIELDS } )
@@ -17,9 +19,16 @@ export default class FinanceStockInfo extends LightningElement {
             this.handleError( error );
         } else if ( data ) {
             const tickerSymbol = data.fields.TickerSymbol.value;
-            getStockInfoForSymbol({ symbol: tickerSymbol }).then( result => {
-                this.stockInfo = result;
-            });
+            this.symbol = tickerSymbol;
+        }
+    }
+
+    @wire( getStockInfoForSymbol, { symbol : '$symbol' } )
+    wiredStockInfo( { error, data } ) {
+        if ( error ) {
+            this.handleError( error );
+        } else if ( data ) {
+            this.stockInfo = data;
         }
     }
 
@@ -32,7 +41,7 @@ export default class FinanceStockInfo extends LightningElement {
         }
         this.dispatchEvent(
             new ShowToastEvent( {
-                title: 'Error loading account',
+                title: 'Error',
                 message,
                 variant: 'error',
             } ),
