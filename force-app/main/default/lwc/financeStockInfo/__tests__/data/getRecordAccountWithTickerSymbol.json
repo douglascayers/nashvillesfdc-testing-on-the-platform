@@ -1,0 +1,16 @@
+{
+    "apiName": "Account",
+    "childRelationships": {},
+    "eTag": "846fdcd21a53214d447e578adbe263c6",
+    "fields": {
+        "TickerSymbol": {
+            "displayValue": "CRM",
+            "value": "CRM"
+        }
+    },
+    "id": "0019A000004j6zDQAQ",
+    "lastModifiedById": "00517000002fESIAA2",
+    "lastModifiedDate": "2019-02-15T10:33:07.000Z",
+    "recordTypeInfo": null,
+    "systemModstamp": "2019-02-15T10:33:07.000Z"
+}

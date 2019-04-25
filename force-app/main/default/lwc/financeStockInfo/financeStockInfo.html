@@ -10,7 +10,9 @@
                     <span class="slds-form-element__label">Symbol</span>
                     <div class="slds-form-element__control">
                         <div class="slds-form-element__static">
-                            {stockInfo.symbol}
+                            <span class="stock-info_symbol">
+                                {stockInfo.symbol}
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -19,7 +21,9 @@
                     <span class="slds-form-element__label">Open Price</span>
                     <div class="slds-form-element__control">
                         <div class="slds-form-element__static">
-                            <lightning-formatted-number value={stockInfo.openPrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                            <span class="stock-info_openPrice">
+                                <lightning-formatted-number value={stockInfo.openPrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -28,7 +32,9 @@
                     <span class="slds-form-element__label">High Price</span>
                     <div class="slds-form-element__control">
                         <div class="slds-form-element__static">
-                            <lightning-formatted-number value={stockInfo.highPrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                            <span class="stock-info_highPrice">
+                                <lightning-formatted-number value={stockInfo.highPrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -37,7 +43,9 @@
                     <span class="slds-form-element__label">Low Price</span>
                     <div class="slds-form-element__control">
                         <div class="slds-form-element__static">
-                            <lightning-formatted-number value={stockInfo.lowPrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                            <span class="stock-info_lowPrice">
+                                <lightning-formatted-number value={stockInfo.lowPrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -46,7 +54,9 @@
                     <span class="slds-form-element__label">Close Price</span>
                     <div class="slds-form-element__control">
                         <div class="slds-form-element__static">
-                            <lightning-formatted-number value={stockInfo.closePrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                            <span class="stock-info_closePrice">
+                                <lightning-formatted-number value={stockInfo.closePrice} format-style="currency" currency-code="USD" currency-display-as="symbol"></lightning-formatted-number>
+                            </span>
                         </div>
                     </div>
                 </div>

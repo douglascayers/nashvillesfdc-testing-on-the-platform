@@ -1,0 +1,21 @@
+{
+  "name": "nashvillesfdc-testing-on-the-platform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:unit": "lwc-jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform.git"
+  },
+  "author": "Doug Ayers",
+  "license": "BSD-3",
+  "bugs": {
+    "url": "https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/issues"
+  },
+  "homepage": "https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform#readme",
+  "devDependencies": {
+    "@salesforce/lwc-jest": "^0.4.12"
+  }
+}
