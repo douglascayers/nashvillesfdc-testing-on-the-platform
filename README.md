@@ -4,7 +4,7 @@ This is the sample app used to demo unit, integration, and browser testing at th
 
 The purpose of the app is in the tests, which show a progression of unit tests focused on particular Apex methods, to larger integration tests of the side effects of processes and triggers to DML updates, to mocking http callouts.
 
-Since Apex testing and Lightning Web Component testing have to mock callouts, they don't give a great picture of how well all the pieces come together in a live environment. The last part of the presentation demoed using [Ghost Inspector](https://ghostinspector.com/) to automate a browser in a live scratch org to perform integration testing.
+Since Apex testing and Lightning Web Component testing have to mock callouts, they don't give a great picture of how well all the pieces come together in a live environment. The last part of the presentation demoed using [Ghost Inspector](https://ghostinspector.com/) to automate a browser in a live scratch org to perform integration testing with a finance web service to retrieve stock prices from [AlphaVantage](https://www.alphavantage.co/documentation/#daily).
 
 ## Scenario
 
