@@ -8,8 +8,7 @@ Since Apex testing and Lightning Web Component testing have to mock callouts, th
 
 ## Scenario
 
-This app includes a Process and Trigger on the Account record, and a Lightning Web Component on the Account record page that makes an http callout to a web service to retrieve and display that company's stock prices.
-
+This app includes a Process and Trigger on the Account record, and a Lightning Web Component on the Account record page.
 
 
 When the account's rating becomes "Hot" or "Cold", then the process posts a message to Chatter.
@@ -20,6 +19,13 @@ When the account's rating becomes "Hot" or "Cold", then the process posts a mess
 
 
 When the account's ticker symbol changes, then the trigger resets the stock last refreshed date and stock close price.
+
+![screen shot](images/trigger-clear-stock-fields.png)
+
+When viewing the account record, the Lightning record page includes a stock price component in the top-right to display the day's prices for the account's ticker symbol.
+
+![screen shot](images/account-page-stock-info.png)
+
 
 # Resources
 
