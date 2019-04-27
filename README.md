@@ -2,7 +2,7 @@
 
 * [Overview](#overview)
 * [The App](#the-app)
-* [The Tests](#tests)
+* [The Tests](#the-tests)
 * [Resources](#resources)
 
 ## Overview
@@ -23,7 +23,6 @@ When the account's rating becomes "Hot" or "Cold", then the process posts a mess
 
 ![screen shot](images/chatter-posts.png)
 
-
 When the account's ticker symbol changes, then the trigger resets the stock last refreshed date and stock close price.
 
 ![screen shot](images/trigger-clear-stock-fields.png)
@@ -32,8 +31,24 @@ When viewing the account record, the Lightning record page includes a stock pric
 
 ![screen shot](images/account-page-stock-info.png)
 
+## The Tests
 
-# Resources
+* [AccountTriggerHandlerTest.cls](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/classes/AccountTriggerHandlerTest.cls)
+  - Includes three tests, a unit test that asserts behavior of a specific method, and then two methods that assert behavior of the account trigger and account process when DML operations occur.
+
+* [FinanceServiceTest.cls](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/classes/FinanceServiceTest.cls)
+  - Includes two tests, a unit test that asserts a successful and unsuccessful call to the finance web service.
+  - As a unit test, the actual callout is [mocked](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/classes/FinanceServiceHttpCalloutMock.cls), so these unit tests only assert that our code conforms to a certain interface contract. We have to wait til system testing to be validate our assumptions of the API's behavior.
+  
+* [FinanceControllerTest.cls](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/classes/FinanceControllerTest.cls)
+  - Includes two tests, which are short and sweet that cover the small functionality the controller provides beyond the finance service.
+  - The controller is used by the Lightning web component.
+  
+* [financeStockInfo.test.js](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/tree/master/force-app/main/default/lwc/financeStockInfo/__tests__)
+  - Includes two tests, which assert that the component displays stock info when given a ticker symbol, or doesn't render when there is no ticker symbol.
+  - As a unit test, the actual callout is [mocked](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/lwc/financeStockInfo/__tests__/financeStockInfo.test.js#L13), so these unit tests only assert that our code conforms to a certain interface contract. We have to wait til system testing to be validate our assumptions of the API's behavior.
+
+## Resources
 
 * [Unit Testing on the Lightning Platform](https://trailhead.salesforce.com/en/content/learn/modules/unit-testing-on-the-lightning-platform)
 * [Apex Testing](https://trailhead.salesforce.com/en/content/learn/modules/apex_testing)
