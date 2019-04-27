@@ -1,10 +1,10 @@
 # Testing on the Salesforce Platform
 
-This is the sample app used to demo unit, integration, and browser testing at the [Nashville Salesforce Developer Group meetup on April 25, 2019](https://trailblazercommunitygroups.com/events/details/salesforce-nashville-tn-developers-group-presents-april-19-developer-user-group/).
+This is the sample app used to demo [unit](http://softwaretestingfundamentals.com/unit-testing/), [integration](http://softwaretestingfundamentals.com/integration-testing/), and [system](http://softwaretestingfundamentals.com/system-testing/) testing at the [Nashville Salesforce Developer Group meetup on April 25, 2019](https://trailblazercommunitygroups.com/events/details/salesforce-nashville-tn-developers-group-presents-april-19-developer-user-group/).
 
-The purpose of the app is in the tests, which show a progression of unit tests focused on particular Apex methods, to larger integration tests of the side effects of processes and triggers to DML updates, to mocking http callouts.
+The purpose of the app is in the tests, which show a progression of unit tests focused on particular Apex methods, to larger integration tests of the side effects of processes and triggers to DML updates, to system testing everything together in a live Salesforce [sandbox or scratch org](https://www.youtube.com/watch?v=fiRKUkLF6Eg).
 
-Since Apex testing and Lightning Web Component testing have to mock callouts, they don't give a great picture of how well all the pieces come together in a live environment. The last part of the presentation demoed using [Ghost Inspector](https://ghostinspector.com/) to automate a browser in a live scratch org to perform integration testing with a finance web service to retrieve stock prices from [AlphaVantage](https://www.alphavantage.co/documentation/#daily).
+Since Apex unit testing and Lightning Web Component unit testing have to mock callouts, they don't give a great picture of how well all the pieces come together in a live environment. The last part of the presentation covered system testing using [Ghost Inspector](https://ghostinspector.com/) to automate a browser to log in to a scratch org, create an account, then assert the behavior of the FinanceStockInfo component that calls out to a finance web service to retrieve stock prices from [AlphaVantage](https://www.alphavantage.co/documentation/#daily).
 
 ## Scenario
 
