@@ -52,7 +52,7 @@ When viewing the account record, the Lightning record page includes a stock pric
   - For system testing, I used a browser automation tool to log in to a scratch org with the app's metadata deployed. The test created an account record and asserted the Finance Stock Info component rendered data, then it deleted the record.
   - In contrast to the earlier unit tests, this system test asserted behavior of all the pieces of the application coming together and making actual http callouts to the finance web service -- not mocked responses.
 
-[![screen shot](images/ghost-inspector-video-screenshot.png)](images/ghost-inspector-video.mp4)
+[![screen shot](images/ghost-inspector-video-screenshot.png)](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/raw/master/images/ghost-inspector-video.mp4)
 
 ## Resources
 
