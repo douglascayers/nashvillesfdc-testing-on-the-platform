@@ -38,7 +38,7 @@ When viewing the account record, the Lightning record page includes a stock pric
 
 * [FinanceServiceTest.cls](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/classes/FinanceServiceTest.cls)
   - Includes two tests, a unit test that asserts a successful and unsuccessful call to the finance web service.
-  - As a unit test, the actual callout is [mocked](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/classes/FinanceServiceHttpCalloutMock.cls), so these unit tests only assert that our code conforms to a certain interface contract. We have to wait til system testing to be validate our assumptions of the API's behavior.
+  - As a unit test, the actual callout is [mocked](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/classes/FinanceServiceHttpCalloutMock.cls), so these unit tests only assert that our code conforms to a certain interface contract. We have to wait until system testing to validate our assumptions of the API's behavior.
   
 * [FinanceControllerTest.cls](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/classes/FinanceControllerTest.cls)
   - Includes two tests, which are short and sweet that cover the small functionality the controller provides beyond the finance service.
