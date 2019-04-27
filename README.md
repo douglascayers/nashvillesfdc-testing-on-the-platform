@@ -10,7 +10,6 @@ Since Apex unit testing and Lightning Web Component unit testing have to mock ca
 
 This app includes a Process and Trigger on the Account record, and a Lightning Web Component on the Account record page.
 
-
 When the account's rating becomes "Hot" or "Cold", then the process posts a message to Chatter.
 
 ![screen shot](images/process-builder.png)
