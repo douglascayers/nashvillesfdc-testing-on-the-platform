@@ -4,7 +4,7 @@ This is the sample app used to demo [unit](http://softwaretestingfundamentals.co
 
 The purpose of the app is in the tests, which show a progression of unit tests focused on particular Apex methods, to larger integration tests of the side effects of processes and triggers to DML updates, to system testing everything together in a live Salesforce [sandbox or scratch org](https://www.youtube.com/watch?v=fiRKUkLF6Eg).
 
-Since Apex unit testing and Lightning Web Component unit testing have to mock callouts, they don't give a great picture of how well all the pieces come together in a live environment. The last part of the presentation covered system testing using [Ghost Inspector](https://ghostinspector.com/) to automate a browser to log in to a scratch org, create an account, then assert the behavior of the FinanceStockInfo component that calls out to a finance web service to retrieve stock prices from [AlphaVantage](https://www.alphavantage.co/documentation/#daily).
+Since Apex unit testing and Lightning Web Component unit testing have to mock callouts, they don't give a great picture of how well all the pieces come together in a live environment. The last part of the presentation covered system testing using [Ghost Inspector](https://ghostinspector.com/) to automate a browser to log in to a scratch org, create an account, then assert the behavior of the [FinanceStockInfo](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/tree/master/force-app/main/default/lwc/financeStockInfo) component that calls out to a finance web service to retrieve stock prices from [AlphaVantage](https://www.alphavantage.co/documentation/#daily).
 
 ## Scenario
 
