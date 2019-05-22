@@ -3,6 +3,7 @@
 * [Overview](#overview)
 * [The App](#the-app)
 * [The Tests](#the-tests)
+* [Alpha Vantage API Key](#alpha-vantage-api-key)
 * [Resources](#resources)
 
 ## Overview
@@ -53,6 +54,10 @@ When viewing the account record, the Lightning record page includes a stock pric
   - In contrast to the earlier unit tests, this system test asserted behavior of all the pieces of the application coming together and making actual http callouts to the finance web service -- not mocked responses.
 
 [![screen shot](images/ghost-inspector-video-screenshot.png)](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/raw/master/images/ghost-inspector-video.mp4)
+
+## Alpha Vantage API Key
+
+Before deploying the code to your org, update the [FinanceService.cls](https://github.com/douglascayers/nashvillesfdc-testing-on-the-platform/blob/master/force-app/main/default/classes/FinanceService.cls#L5) with your [Alpha Vantage API Key](https://www.alphavantage.co/support/#api-key). It's free to sign up with Alpha Vantage, which is the web service used to retrieve stock info.
 
 ## Resources
 
