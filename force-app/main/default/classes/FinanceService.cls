@@ -1,7 +1,8 @@
 public inherited sharing class FinanceService {
 
     // The AlphaVantage API key should be in custom metadata or custom setting
-    private static final String API_KEY = 'Q1GONL4ZQSJ59T64';
+    // Get your free api key from https://www.alphavantage.co/support/#api-key
+    private static final String API_KEY = 'YOUR_ALPHAVANTAGE_API_KEY';
 
     public StockInfo getStockInfoForSymbol( String symbol ) {
 
